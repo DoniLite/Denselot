@@ -1,0 +1,42 @@
+name: Deno CI
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  pull_request:
+    branches:
+      - main
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout le code de ton dépôt
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # Installe Deno
+      - name: Setup Deno
+        uses: denoland/setup-deno@v1
+        with:
+          deno-version: v1.x
+
+      # Vérifie les types
+      - name: Type-check
+        run: deno check main.ts
+
+      # Lancer les tests
+      - name: Run Tests
+        run: deno test
+
+      # Formatte le code
+      - name: Linting
+        run: deno lint
+
+      # Vérifie que le code est bien formaté
+      - name: Format Check
+        run: deno fmt --check

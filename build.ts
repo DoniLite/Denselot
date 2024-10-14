@@ -18,10 +18,10 @@ await build({
     license: 'MIT',
     repository: {
       type: 'git',
-      url: 'git+https://github.com/lambtron/is-42.git',
+      url: 'git+https://github.com/DoniLite/Denselot.git',
     },
     bugs: {
-      url: 'https://github.com/lambtron/is-42/issues',
+      url: 'https://github.com/DoniLite/Denselot/issues',
     },
   },
   postBuild() {
