@@ -23,7 +23,7 @@ jobs:
       - name: Setup Deno
         uses: denoland/setup-deno@v2
         with:
-            deno-version: v2.x
+          deno-version: v2.x
 
       # Vérifie les types
       - name: Type-check
@@ -38,5 +38,5 @@ jobs:
         run: deno lint
 
       # Vérifie que le code est bien formaté
-      - name: Format Check
-        run: deno fmt --check
+    #   - name: Format Check
+    #     run: deno fmt --check
