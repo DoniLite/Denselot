@@ -4,7 +4,7 @@ updates:
     directory: "/"           # Répertoire où se trouve le fichier package.json
     schedule:
       interval: "weekly"     # Fréquence de vérification (daily, weekly, monthly)
-  - package-ecosystem: "deno" # Pour un projet Deno
+  - package-ecosystem: "npm" # Pour un projet Deno
     directory: "/"            # Répertoire contenant le fichier deno.json
     schedule:
       interval: "weekly"
